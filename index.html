@@ -56,15 +56,15 @@
                     <h2 class="titulo-ecommerce">Revisa el costo de los robots físicos</h2>
                     <div class="swiper mySwiper1">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide elemento-ecommerce">Slide 1</div>
-                            <div class="swiper-slide elemento-ecommerce">Slide 2</div>
-                            <div class="swiper-slide elemento-ecommerce">Slide 3</div>
-                            <div class="swiper-slide elemento-ecommerce">Slide 4</div>
-                            <div class="swiper-slide elemento-ecommerce">Slide 5</div>
-                            <div class="swiper-slide elemento-ecommerce">Slide 6</div>
-                            <div class="swiper-slide elemento-ecommerce">Slide 7</div>
-                            <div class="swiper-slide elemento-ecommerce">Slide 8</div>
-                            <div class="swiper-slide elemento-ecommerce">Slide 9</div>
+                            <div class="elemento-ecommerce swiper-slide">Slide 1</div>
+                            <div class="elemento-ecommerce swiper-slide">Slide 2</div>
+                            <div class="elemento-ecommerce swiper-slide">Slide 3</div>
+                            <div class="elemento-ecommerce swiper-slide">Slide 4</div>
+                            <div class="elemento-ecommerce swiper-slide">Slide 5</div>
+                            <div class="elemento-ecommerce swiper-slide">Slide 6</div>
+                            <div class="elemento-ecommerce swiper-slide">Slide 7</div>
+                            <div class="elemento-ecommerce swiper-slide">Slide 8</div>
+                            <div class="elemento-ecommerce swiper-slide">Slide 9</div>
                         </div>
                     </div>
                 </div>
@@ -469,6 +469,7 @@
             </div>
         </div>
 
+        <div class="container-dignita-ofrece">
         <div class="dignita-ofrece">
             <h2>Todo lo que te ofrece Dignita es...</h2>
 
@@ -545,7 +546,10 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="container-how">
+        
         <div class="container-how-grande">
             <h3>¡Te ayudaremos!</h3>
             <div class="textos-how">
@@ -597,6 +601,8 @@
         <div class="container-how-pequeno">
 
         </div>
+        
+    </div>
 
         <div class="container-final">
 
@@ -770,8 +776,9 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
+            centeredSlides: true,
             slidesPerView: 1,
-            spaceBetween: 30,
+            spaceBetween: 10,
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
@@ -788,7 +795,7 @@
                 },
                 1024: {
                     slidesPerView: 3,
-                    spaceBetween: 50,
+                    spaceBetween: 40,
                 },
             },
         });

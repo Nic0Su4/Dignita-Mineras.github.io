@@ -70,3 +70,13 @@ for (let i = 0; i < div.length; i++) {
     }
   })(i))
 }
+
+
+/* Animaciones scroll */
+// const viewportWidth = window.innerWidth;
+
+// const swiperWrapper = document.querySelector('.swiper-wrapper');
+// const swiperContainer = document.querySelector('.swiper');
+
+// swiperWrapper.style.width = `${viewportWidth - 60}px`;
+// swiperContainer.style.overflow = 'hidden';

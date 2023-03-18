@@ -133,11 +133,11 @@ p {
     }
 
     .header h1, .header h2 {
-        width: 80%;
+        width: 70%;
     }
 
     .header-titulos {
-        width: 65%;
+        width: 70%;
         margin: 2rem auto;
     }
     
@@ -435,13 +435,15 @@ p {
 
 /* Casos de estudio */
 .container-casos-estudio {
+    background: linear-gradient(180deg, #DECDA3 0%, #FDF3D4 100%);
     padding: 10rem 0;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .caso-estudio > h3 {
-    margin: 7rem 0;
+    margin: 7rem auto;
+    width: 80%;
 }
 
 .descripcion-caso {
@@ -508,7 +510,7 @@ p {
 
 /* Solucion Cloudshore */
 .solucion-cloudshore {
-    background-color: #FDF3D4;
+    background: linear-gradient(180deg, #FDF3D4 0%, white 100%);
     padding: 3rem 0;
     margin: 0 auto;
 }
@@ -583,25 +585,43 @@ margin: 0 0 6rem 0;
 }
 
 @media (min-width: 768px) {
-    .caracteristicas-cloudshore {
+    /* .caracteristicas-cloudshore {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 3rem;
         grid-auto-rows: minmax(200px, auto);
+    } */
+
+    .caracteristicas-cloudshore {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .caracteristica-cloudshore {
+        flex-grow: 1;
+        flex: 1 1 24%;
+        margin: 3rem 6rem;
     }
 }
 
 @media (min-width: 992px) {
-    .caracteristicas-cloudshore {
+    /* .caracteristicas-cloudshore {
         grid-template-columns: repeat(4, 1fr);
         column-gap: 3rem;
         grid-auto-rows: minmax(200px, auto);
-    }
+    } */
 }
 
 /* Ofrece Dignita */
+.container-dignita-ofrece {
+    background: linear-gradient(180deg, white 0%, #FDF3D4 100%);
+    padding: 6rem;
+    padding-bottom: 2rem;
+}
+
 .dignita-ofrece {
-    margin: 10rem auto;
+    margin: 10rem auto 0 auto;
     width: 90%;
 }
 
@@ -639,7 +659,7 @@ margin: 0 0 6rem 0;
 }
 
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .caracteristicas-dignita {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -672,6 +692,11 @@ margin: 0 0 6rem 0;
 }
 
 /* How */
+.container-how {
+    background: linear-gradient(180deg, #FDF3D4 0%, #EDDFB3 100%);
+    padding: 8rem;
+}
+
 .iconos-how {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -714,8 +739,8 @@ margin: 0 0 6rem 0;
 }
 
 .container-how-grande {
-    width: 70%;
-    margin: 5rem auto;
+    width: 85%;
+    margin: 0 auto 5rem auto;
 }
 
 .container-how-grande h3 {
@@ -748,7 +773,7 @@ margin: 0 0 6rem 0;
 /* Nuestras Mejoras */
 .nuestras-mejoras {
     position: relative;
-    margin:10rem;
+    margin:0 10rem 10rem 10rem;
 }
 
 .nuestras-mejoras h3 {
@@ -761,6 +786,7 @@ margin: 0 0 6rem 0;
     font-size: clamp(5rem, 5rem + 2vw, 8rem);
     margin: 1.6rem auto;
     padding-top: 5rem;
+    margin-top: 0;
 }
 
 .mejora {
@@ -844,7 +870,7 @@ margin: 0 0 6rem 0;
 
 /* Otras industrias */
 .otras-industrias {
-    padding: 0 4rem 10rem 4rem;
+    padding: 0 0rem 10rem 0rem;
 }
 
 .otras-industrias h2 {
@@ -857,6 +883,10 @@ margin: 0 0 6rem 0;
     width: 100%;
     height: 100%;
   }
+
+.swiper-wrapper {
+    padding: 3rem;
+}
 
   .swiper-slide {
     text-align: center;
@@ -884,6 +914,11 @@ margin: 0 0 6rem 0;
 .elemento-ecommerce {
     height: clamp(40rem, 40rem + 1vw, 60rem);
     background-color: #EDDFB3;
+    transition: all .5s ease;
+}
+
+.elemento-ecommerce:hover {
+    transform: scale(1.1);
 }
 
 .blog-industria {
