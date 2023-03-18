@@ -26,7 +26,6 @@ for (let i = 0; i < iconos.length; i++) {
 
 
 // Listas de procesos core
-
 const contenedorCards = document.querySelector(".cards-contenedor");
 
 contenedorCards.addEventListener("click", function(event) {
@@ -44,3 +43,30 @@ contenedorCards.addEventListener("click", function(event) {
     }
 });
 
+// Listas de procesos general
+let div = [];
+div = document.querySelectorAll(".general .contenedor-cards > div");
+
+let portada = [];
+portada = document.querySelectorAll(".general .portada");
+
+let contenido = [];
+contenido = document.querySelectorAll(".general .contenido");
+
+for (let i = 0; i < div.length; i++) {
+  div[i].addEventListener("mouseenter", (function(index) {
+    return function() {
+      portada[index].style.opacity = "0";
+      portada[index].style.zIndex = "1";
+      contenido[index].style.opacity = "1";
+    }
+  })(i))
+
+  div[i].addEventListener("mouseleave", (function(index) {
+    return function() {
+      portada[index].style.opacity = "1";
+      portada[index].style.zIndex = "3";
+      contenido[index].style.opacity = "0";
+    }
+  })(i))
+}
