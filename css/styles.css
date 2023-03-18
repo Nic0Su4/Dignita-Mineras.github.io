@@ -298,6 +298,7 @@ p {
 
 .descripcion-caso {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     color: white;
     background-color: #A18063;
@@ -306,6 +307,12 @@ p {
     margin: 2rem;
     padding: .5rem 0;
     flex-basis: calc(50%-2rem);
+}
+
+.descripcion-caso img {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
 }
 
 .descripcion-caso p{
