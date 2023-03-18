@@ -28,8 +28,6 @@ img {
 }
 
 .container {
-    max-width: 144rem;
-    width: 90%;
     margin: 0 auto;
 }
 
@@ -43,7 +41,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size: 5.4rem;
+    font-size: clamp(3.5rem, 3.5rem + 1vw, 5.5rem);
 }
 
 h2 {
@@ -59,25 +57,188 @@ p {
     font-size: clamp(1.6rem, 1.2rem + 1vw, 2.2rem);
 }
 
+/* Header */
+.primer-color {
+    background: linear-gradient(180deg, #EDDFB3 0%, #876445 100%);
+}
+
+.header {
+    background-image: url(../img/hero.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.boton-header {
+    margin: 4rem;
+    padding: 4rem 8rem 16rem 8rem;
+}
+
+.boton-header a {
+    border-radius: 1rem;
+    padding: 1rem 6rem;
+    color: white;
+    background-color: #903400;
+    margin: 0 auto;
+    font-size: clamp(1.4rem, 1.5rem + 1vw, 2.8rem);
+    transition: all .3s ease;
+}
+
+.boton-header a:hover {
+    background-color: white;
+    color: #903400;
+}
+
+.header h1 {
+    padding: 8rem 6rem 2rem 6rem;
+    margin: 0;
+}
+
+.header h2 {
+    font-size: clamp(1.4rem, 1.5rem + 1vw, 2.8rem);
+    font-weight: 400;
+    padding: 4rem 6rem 6rem 6rem;
+    text-align: start;
+}
+
+.header h1, .header h2 {
+    color: var(--blanco);
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        background-position: right;
+    }
+}
+
+@media (min-width: 768px) {
+    .header h1, .header h2 {
+        width: 45%;
+    }
+}
+
+/* Ecommerce */
+
+
+/* Organigrama */
+.container-organigrama h2 {
+    margin-top: 10rem;
+    margin-bottom: -2rem;
+}
+
+.organigrama {
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.core {
+    background: linear-gradient(180deg, #876445 0%, #DECDA3 100%);
+    color: #fff;
+    padding: 5rem;
+}
+.core > p {
+    text-align: center;
+    margin-top: clamp(20px, 1.53vw, 28px); /* 22px */
+    margin-bottom: clamp(35px, 3.47vw, 65px); /*50px*/
+}
+.core .cards-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: clamp(40px, 5.21vw, 85px); /* 75px */
+}
+.core .cards-contenedor > div {
+    width: 450px;
+    /*padding: 40px 25px;*/
+    padding: clamp(30px, 2.78vw, 43px) clamp(20px, 1.74vw, 28px);
+    border-radius: clamp(20px, 2.08vw, 32px); /* 30px */
+    border: 2px solid transparent;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+.core .cards-contenedor > div:hover, .core .cards-contenedor > div:hover .circulo {
+    animation: cambiarColor 0.8s;
+    animation-fill-mode: forwards;
+}
+.core .cards-contenedor .select:hover, .core .cards-contenedor .select:hover .circulo {
+    animation: none;
+}
+.core .cards-contenedor > div h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.core .cards-contenedor > .select {
+    border: 4px solid var(--azul);
+    transition: 0.8s all;
+}
+.core .circulo {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border: 2px solid transparent;
+}
+.core .select .circulo {
+    border: none;
+    background-color: var(--azul);
+    box-shadow: 1px 1px 7px #000;
+    transition: 0.8s all;
+}
+.core .circulo i {
+    opacity: 0;
+    font-size: 25px;
+}
+.core .select .circulo i {
+    opacity: 1;
+    transition: 0.8s all;
+}
+.core img {
+    align-self: center;
+    object-fit: contain;
+    height: clamp(90px, 8.33vw, 130px); /* 120px */
+}
+
+@keyframes cambiarColor {
+    0% {
+        border: 2px solid transparent;
+    }
+
+    100% {
+        border: 2px solid #C2C2C2;
+    }
+}
+
+
 /* Container información */
 .container-informacion {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
+    column-gap: 5rem;
 }
 
 .titulo-informacion {
     text-align: center;
+    font-size: clamp(3rem, 3rem + 1vw, 4.5rem);
 }
 
 .parrafo-informacion {
-    font-size: 2.4rem;
-    text-align: center;
+    font-size: clamp(1.4rem, 1.4rem + 1vw, 2rem);
+    text-align: justify;
 }
 
 /* Casos de estudio */
-.casos-estudio {
+.container-casos-estudio {
     padding: 10rem 0;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .caso-estudio > h3 {
@@ -505,4 +666,9 @@ margin: 0 0 6rem 0;
     position: relative;
     z-index: 3;
     background: linear-gradient(180deg, #EDDFB3 0%, #D2A882 100%);
+}
+
+.elemento-ecommerce {
+    height: clamp(40rem, 40rem + 1vw, 60rem);
+    background-color: #EDDFB3;
 }
