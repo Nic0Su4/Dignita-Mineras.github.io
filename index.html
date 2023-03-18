@@ -80,7 +80,7 @@
         <div class="container-procesos">
             <div class="core">
                 <h2>Selecciona las tareas en donde necesite una mejora</h2>
-                <p>Lista de procesos automatizables</p>
+                <p>Lista de Procesos Core Automatizables</p>
                 <div class="cards-contenedor">
                     <div>
                         <img src="img/ticket.png" alt="tickets-promedios-minimos">
@@ -123,6 +123,20 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vestibulum tortor ipsum, sit amet sagittis arcu viverra quis.</p>
                         <div class="circulo"><i class="fa-solid fa-check"></i></div>
                     </div>
+                </div>
+            </div>
+
+            <div class="procesos-generales">
+                <p>Lista de Procesos Generales Automatizables</p>
+
+                <div class="lista-procesos-generales finanzas">
+                    <h3>Finanzas</h3>
+                </div>
+                <div class="lista-procesos-generales marketing">
+                    <h3>Marketing</h3>
+                </div>
+                <div class="lista-procesos-generales logistica">
+                    <h3>Logística</h3>
                 </div>
             </div>
         </div>
@@ -459,9 +473,9 @@
 
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide blog-industria">
                             <div class="imagen-blog">
-                                <img src="" alt="">
+                                <img src="img/rectangul.png" alt="">
                             </div>
                             <div class="titulo-blog">
                                 <h3>Bancos</h3>
@@ -473,10 +487,13 @@
                                     mattis leo et cursus lobortis.
                                 </p>
                             </div>
+                            <div class="container-enlace">
+                                <a href="#" class="enlace-blog">Leer más <i class="fa-solid fa-angle-right"></i></a>
+                            </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide blog-industria">
                             <div class="imagen-blog">
-                                <img src="" alt="">
+                                <img src="img/rectangul.png" alt="">
                             </div>
                             <div class="titulo-blog">
                                 <h3>Pesquera</h3>
@@ -488,10 +505,13 @@
                                     mattis leo et cursus lobortis.
                                 </p>
                             </div>
+                            <div class="container-enlace">
+                                <a href="#" class="enlace-blog">Leer más <i class="fa-solid fa-angle-right"></i></a>
+                            </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide blog-industria">
                             <div class="imagen-blog">
-                                <img src="" alt="">
+                                <img src="img/rectangul.png" alt="">
                             </div>
                             <div class="titulo-blog">
                                 <h3>Finanzas</h3>
@@ -503,10 +523,13 @@
                                     mattis leo et cursus lobortis.
                                 </p>
                             </div>
+                            <div class="container-enlace">
+                                <a href="#" class="enlace-blog">Leer más <i class="fa-solid fa-angle-right"></i></a>
+                            </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide blog-industria">
                             <div class="imagen-blog">
-                                <img src="" alt="">
+                                <img src="img/rectangul.png" alt="">
                             </div>
                             <div class="titulo-blog">
                                 <h3>Gobierno</h3>
@@ -518,10 +541,13 @@
                                     mattis leo et cursus lobortis.
                                 </p>
                             </div>
+                            <div class="container-enlace">
+                                <a href="#" class="enlace-blog">Leer más <i class="fa-solid fa-angle-right"></i></a>
+                            </div>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide blog-industria">
                             <div class="imagen-blog">
-                                <img src="" alt="">
+                                <img src="img/rectangul.png" alt="">
                             </div>
                             <div class="titulo-blog">
                                 <h3>Agroindustria</h3>
@@ -532,6 +558,9 @@
                                     ultricies. Sed dui nisl, aliquam nec velit at, pharetra mollis elit. Vestibulum
                                     mattis leo et cursus lobortis.
                                 </p>
+                            </div>
+                            <div class="container-enlace">
+                                <a href="#" class="enlace-blog">Leer más <i class="fa-solid fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -580,14 +609,6 @@
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
             breakpoints: {
                 320: {
                     slidesPerView: 1.5,

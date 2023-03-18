@@ -132,12 +132,20 @@ p {
     padding: 2rem;
 }
 
-.core {
+/* Procesos core */
+.container-procesos {
+    padding: 10rem 0;
     background: linear-gradient(180deg, #876445 0%, #DECDA3 100%);
+}
+
+.core {
+    width: 85%;
+    margin: 0 auto;
     color: #fff;
     padding: 5rem;
 }
-.core > p {
+.core > p, .procesos-generales > p {
+    color: white;
     text-align: center;
     margin-top: clamp(20px, 1.53vw, 28px); /* 22px */
     margin-bottom: clamp(35px, 3.47vw, 65px); /*50px*/
@@ -171,7 +179,7 @@ p {
     margin-bottom: 20px;
 }
 .core .cards-contenedor > .select {
-    border: 4px solid var(--azul);
+    border: 2px solid white;
     transition: 0.8s all;
 }
 .core .circulo {
@@ -214,6 +222,49 @@ p {
     100% {
         border: 2px solid #C2C2C2;
     }
+}
+
+/* Procesos generales */
+.procesos-generales {
+    margin: 8rem auto;
+    width: 90%;
+}
+
+.lista-procesos-generales h3 {
+    color: white;
+}
+
+.lista-procesos-generales {
+    border-radius: 5rem;
+    margin: 5rem auto;
+    background-color: #B2AC97;
+    width: 80%;
+    height: clamp(35rem, 35vw, 60rem);
+}
+
+.lista-procesos-generales h3 {
+    padding: 4rem;
+}
+
+.finanzas {
+    background-image: url(../img/pilas\ de\ dinero.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.marketing {
+    background-image: url(../img/marketing.png);
+    background-size: 55%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.logistica {
+    background-image: url(../img/logistica.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 
@@ -542,6 +593,7 @@ margin: 0 0 6rem 0;
 /* Nuestras Mejoras */
 .nuestras-mejoras {
     position: relative;
+    margin:10rem;
 }
 
 .nuestras-mejoras h3 {
@@ -637,7 +689,13 @@ margin: 0 0 6rem 0;
 
 /* Otras industrias */
 .otras-industrias {
-    padding: 3rem;
+    padding: 0 4rem 10rem 4rem;
+}
+
+.otras-industrias h2 {
+    position: relative;
+    z-index: 2;
+    color: white;
 }
 
 .swiper {
@@ -671,4 +729,59 @@ margin: 0 0 6rem 0;
 .elemento-ecommerce {
     height: clamp(40rem, 40rem + 1vw, 60rem);
     background-color: #EDDFB3;
+}
+
+.blog-industria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-blog img{
+    margin: 3rem;
+}
+
+.imagen-blog img {
+    margin: 3rem auto;
+}
+
+.titulo-blog h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.texto-blog {
+    padding: 0 3rem;
+    text-align: justify;
+}
+
+.enlace-blog {
+    font-size: clamp(1.6rem, 1.6rem + 1vw, 2.2rem);
+    text-align: start;
+}
+
+.container-enlace {
+    width: 80%;
+    padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    /* Core */
+    .core .circulo, .core .cards-contenedor > div {
+        border: 2px solid #C2C2C2;
+    }
+    .core .cards-contenedor > div:hover, .core .cards-contenedor > div:hover .circulo {
+        animation: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+        /* Core */
+        .core .circulo, .core .cards-contenedor > div {
+            border: 2px solid #C2C2C2;
+        }
+        .core .cards-contenedor > div:hover, .core .cards-contenedor > div:hover .circulo {
+            animation: none;
+        }
 }

@@ -25,4 +25,22 @@ for (let i = 0; i < iconos.length; i++) {
 }
 
 
+// Listas de procesos core
+
+const contenedorCards = document.querySelector(".cards-contenedor");
+
+contenedorCards.addEventListener("click", function(event) {
+    if (event.target.closest(".core .cards-contenedor > div")) {
+        let elemento;
+      if (event.target.tagName === "DIV") {
+        elemento = event.target;
+      }
+      else {
+        elemento = event.target.parentNode;
+      }
+
+      elemento.classList.toggle("select");
+
+    }
+});
 
