@@ -332,6 +332,11 @@ p {
     background-position: bottom;
 } */
 
+.general {
+    width: 85%;
+    margin: 0 auto;
+}
+
 .general h2 {
     color: var(--azul);
     margin-bottom: clamp(40px, 4.86vw, 80px);
@@ -506,6 +511,11 @@ p {
     margin: 0 auto;
 }
 
+.casos-estudio {
+    width: 85%;
+    margin: 0 auto;
+}
+
 .caso-estudio>h3 {
     margin: 7rem auto;
     width: 80%;
@@ -574,8 +584,12 @@ p {
 }
 
 /* Solucion Cloudshore */
-.solucion-cloudshore {
+.solucion-cloudshore-container {
     background: linear-gradient(180deg, #FDF3D4 0%, white 100%);
+}
+
+.solucion-cloudshore {
+    width: 85%;
     padding: 3rem 0;
     margin: 0 auto;
 }
@@ -687,7 +701,7 @@ p {
 
 .dignita-ofrece {
     margin: 10rem auto 0 auto;
-    width: 90%;
+    width: 85%;
 }
 
 .dignita-ofrece h2 {
@@ -837,8 +851,10 @@ p {
 
 /* Nuestras Mejoras */
 .nuestras-mejoras {
+    width: 80%;
     position: relative;
     margin: 0 10rem 10rem 10rem;
+    margin: 0 auto;
 }
 
 .nuestras-mejoras h3 {
