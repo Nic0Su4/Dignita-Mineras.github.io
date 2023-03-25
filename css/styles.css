@@ -73,7 +73,7 @@ p {
 }
 
 .header img {
-    padding: 5rem;
+    padding: 5rem 5rem 5rem 5rem;
 }
 
 .header {
@@ -106,9 +106,20 @@ p {
 
 .boton-header {
     margin: 0;
-    padding: 10rem 6rem 10rem 6rem;
+    padding: 5rem 6rem 5rem 6rem;
     display: flex;
     justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .header img {
+        padding: 6rem;
+    }
+
+    .boton-header {
+        
+        padding: 2rem 6rem 4rem 6rem;
+    }
 }
 
 @media (min-width: 768px) {
@@ -146,6 +157,11 @@ p {
     text-align: start;
 }
 
+.header-titulos {
+    position: relative;
+    z-index: 2;
+}
+
 .header h1,
 .header h2 {
     color: var(--blanco);
@@ -154,6 +170,16 @@ p {
 @media screen and (max-width: 992px) {
     .header {
         background-position: right;
+    }
+}
+
+
+@media (min-width: 500px) {
+
+
+    .header-titulos {
+        margin: 0 auto;
+        width: 80%;
     }
 }
 
@@ -173,16 +199,6 @@ p {
     }
 
 }
-
-@media (min-width: 500) {
-
-
-    .header-titulos {
-        margin: 0 auto;
-        width: 80%;
-    }
-}
-
 /* Ecommerce */
 
 
