@@ -1207,6 +1207,11 @@ p {
     padding: 3rem;
     margin: 4rem 0;
     box-shadow: 11px 16px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+}
+
+.mejora:hover, .blog-industria:hover {
+    transform: scale(1.08);
 }
 
 .mejora-titulo h3 {
@@ -1299,6 +1304,7 @@ p {
 
 .blog-industria {
     box-shadow: 11px 16px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
 }
 
 .swiper-wrapper {
