@@ -902,21 +902,21 @@ p {
     .item1 {
         top: 50%;
         left: 0;
-        animation: rotar1 6s;
+        animation: rotar1 15s;
         animation-iteration-count: infinite;
     }
 
     .item2 {
         top: calc(1vh - 10px);
         left: calc(50vw - 50%);
-        animation: rotar2 6s;
+        animation: rotar2 15s;
         animation-iteration-count: infinite;
     }
 
     .item3 {
         top: 50%;
         left: calc(100% - 27rem);
-        animation: rotar3 6s;
+        animation: rotar3 15s;
         animation-iteration-count: infinite;
     }
 
@@ -927,16 +927,34 @@ p {
             left: 0;
         }
 
+        15% {
+            top: calc(1vh - 10px);
+            left: calc(50vw - 50%);
+            transform: scale(1.3);
+        }
+
         33% {
             top: calc(1vh - 10px);
             left: calc(50vw - 50%);
             transform: scale(1.3);
         }
 
+        48% {
+            top: 50%;
+            transform: scale(1);
+            left: calc(100% - 27rem);
+        }
+
         66% {
             top: 50%;
             transform: scale(1);
             left: calc(100% - 27rem);
+        }
+
+        81% {
+            transform: scale(1);
+            top: 50%;
+            left: 0;
         }
 
         100% {
@@ -953,16 +971,34 @@ p {
             transform: scale(1.3);
         }
 
+        15% {
+            transform: scale(1);
+            top: 50%;
+            left: calc(100% - 27rem);
+        }
+
         33% {
             transform: scale(1);
             top: 50%;
             left: calc(100% - 27rem);
         }
 
+        48% {
+            transform: scale(1);
+            top: 50%;
+            left: 0;
+        }
+
         66% {
             transform: scale(1);
             top: 50%;
             left: 0;
+        }
+
+        81% {
+            top: calc(1vh - 10px);
+            left: calc(50vw - 50%);
+            transform: scale(1.3);
         }
 
         100% {
@@ -979,16 +1015,34 @@ p {
             left: calc(100% - 27rem);
         }
 
+        15% {
+            transform: scale(1);
+            top: 50%;
+            left: 50px;
+        }
+
         33% {
             transform: scale(1);
             top: 50%;
             left: 50px;
         }
 
+        48% {
+            top: calc(1vh - 10px);
+            left: calc(50vw - 50%);
+            transform: scale(1.3);
+        }
+
         66% {
             top: calc(1vh - 10px);
             left: calc(50vw - 50%);
             transform: scale(1.3);
+        }
+
+        81% {
+            transform: scale(1);
+            top: 50%;
+            left: calc(100% - 27rem);
         }
 
         100% {
