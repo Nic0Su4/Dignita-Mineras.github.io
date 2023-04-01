@@ -74,8 +74,10 @@ contenedorCards.addEventListener("click", function (event) {
 });
 
 // Listas de procesos general
+
+// *efecto de hover
 let div = [];
-div = document.querySelectorAll(".general .contenedor-cards > div");
+div = document.querySelectorAll(".general .contendor-cards > div");
 
 let portada = [];
 portada = document.querySelectorAll(".general .portada");
@@ -84,21 +86,59 @@ let contenido = [];
 contenido = document.querySelectorAll(".general .contenido");
 
 for (let i = 0; i < div.length; i++) {
-  div[i].addEventListener("mouseenter", (function (index) {
-    return function () {
+  div[i].addEventListener("mouseenter", (function(index) {
+    return function() {
       portada[index].style.opacity = "0";
       portada[index].style.zIndex = "1";
       contenido[index].style.opacity = "1";
     }
   })(i))
 
-  div[i].addEventListener("mouseleave", (function (index) {
-    return function () {
+  div[i].addEventListener("mouseleave", (function(index) {
+    return function() {
       portada[index].style.opacity = "1";
       portada[index].style.zIndex = "3";
       contenido[index].style.opacity = "0";
     }
   })(i))
+}
+
+// *Evento de despliegle
+let subMenu = [];
+subMenu = document.querySelectorAll(".general .sub-menu");
+
+let item = [];
+item = document.querySelectorAll(".general .item");
+
+for (let i = 0; i < subMenu.length; i++) {
+  subMenu[i].addEventListener("click", (function(index) {
+    return function() {
+      subMenu[i].parentNode.classList.toggle("active");
+      
+    }
+  })(i))
+}
+
+// *Evento de seleccionar los procesos
+let despegable = [];
+despegable = document.querySelectorAll(".general .despegable");
+
+for (i=0; i< despegable.length; i++) {
+  despegable[i].addEventListener("click", function(event) {
+    console.log(event.target)
+    if (event.target.closest(".general .despegable .circulo")) {
+        let elemento;
+      if (event.target.tagName === "DIV") {
+        elemento = event.target;
+      }
+      else {
+        elemento = event.target.parentNode;
+      }
+
+      elemento.classList.toggle("select");
+
+    }
+  })
 }
 
 

@@ -373,66 +373,20 @@ p {
     }
 }
 
-/* Procesos generales */
-/* .procesos-generales {
-    margin: 8rem auto;
-    width: 90%;
-}
 
-.lista-procesos-generales h3 {
-    color: white;
-}
-
-.lista-procesos-generales {
-    border-radius: 5rem;
-    margin: 5rem auto;
-    background-color: #B2AC97;
-    width: 80%;
-    height: clamp(35rem, 35vw, 60rem);
-}
-
-.lista-procesos-generales h3 {
-    padding: 4rem;
-}
-
-.finanzas {
-    background-image: url(../img/pilas\ de\ dinero.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
-
-.marketing {
-    background-image: url(../img/marketing.png);
-    background-size: 55%;
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
-
-.logistica {
-    background-image: url(../img/logistica.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom;
-} */
-
+/* general */
 .general {
     width: 85%;
     margin: 0 auto;
 }
-
 .general h2 {
     color: white;
-    font-size: clamp(2rem, 2rem + 1vw, 3.2rem);
-    /* 70px */
+    margin-bottom: clamp(40px,4.86vw, 80px); /* 70px */
 }
-
 /* iconos */
-.general .circulo {
-    width: clamp(30px, 2.78vw, 42px);
-    /* 40px */
-    height: clamp(30px, 2.78vw, 42px);
-    /* 40px */
+.general .circulo { 
+    width: clamp(30px, 2.78vw, 42px); /* 40px */
+    height: clamp(30px, 2.78vw, 42px); /* 40px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -440,39 +394,35 @@ p {
     border-radius: 50%;
     cursor: pointer;
 }
-
-.general .active {
+.general .select {
     background-color: var(--azul);
     border: 2px solid transparent;
+    transition: 0.3s;
 }
-
 .general i {
-    font-size: clamp(15px, 1.39vw, 22px);
-    /* 20px */
+    font-size: clamp(15px, 1.39vw, 22px); /* 20px */
+    color: #fff;
 }
-
+.general .sub-menu i {
+    color: var(--negro);
+}
 /* contenedores */
-.general .contenedor-cards {
+.general .contendor-cards {
     display: flex;
     flex-direction: column;
     gap: clamp(20px, 3.47vw, 60px);
 }
-
-.general .contenedor-cards>div {
+.general .contendor-cards > div {
+    box-shadow: 11px 16px 20px rgba(0, 0, 0, 0.25);
     background: linear-gradient(180deg, #876445 0%, #F5D4A2 100%);
     color: #fff;
-    border-radius: clamp(20px, 3.47vw, 60px);
-    /* 50px */
+    border-radius: clamp(20px, 3.47vw, 60px); /* 50px */
     height: 500px;
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
 }
-
-.card {
-    width: clamp(80%, 88%, 90%);
-    margin: 0 auto;
-}
-
 .general .portada {
     position: absolute;
     top: 0;
@@ -487,62 +437,102 @@ p {
     z-index: 3;
     opacity: 1;
 }
-
 .general .portada h3 {
     font-size: clamp(2.5rem, 2.5rem + 1vh, 3.5rem);
     padding-bottom: 40px;
+    position: relative;
+    z-index: 4;
+    color: black;
 }
-
-.general img {
-    position: absolute;
-    bottom: clamp(15px, 1.39vw, 22px);
-    /*20px */
-    object-fit: contain;
-    height: clamp(100px, 27.08vw, 400px);
-    /* 390px */
+.general .contenido h3 {
+    color: white;
+    margin-bottom: clamp(15px, 0.56vw, 12px); /* 8px */
 }
-
-.general img:nth-child(odd) {
-    left: clamp(10px, 3.47vw, 55px);
-    /* 50px */
-    transform: rotateY(180deg);
+.general .contendor-contenido {
+    height: 85%;
+    overflow-y: auto;
 }
-
-.general img:nth-child(even) {
-    right: clamp(10px, 3.47vw, 55px);
-    /* 50px */
-}
-
 .general .contenido {
-    padding: clamp(15px, 1.74vw, 30px);
-    /* 25px */
+    padding: clamp(15px, 1.74vw, 28px) clamp(25px, 2.78vw, 45px); /* 40px */
     display: flex;
     flex-direction: column;
-    gap: clamp(15px, 2.43vw, 38px);
-    /* 35px */
-    height: 100%;
-    overflow-y: auto;
+    gap: clamp(13px, 1.18vw, 22px); /* 17px */
     position: relative;
     z-index: 2;
     opacity: 0;
     transition: 1s;
 }
-
-.general .contenido>div {
+.general .despegable > div{
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: clamp(15px, 1.74vw, 30px);
-    /* 25px */
+    gap: clamp(10px, 1.04vw, 20px); /* 15px */
+}
+.general .despegable {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(15px, 1.39vw, 25px) 0; /* 20px */
+    padding-left: clamp(20px, 2.08vw, 35px); /* 30px */;
+    gap: clamp(15px, 1.39vw, 25px); /* 20px */;
+}
+.general .despegable p {
+    align-self: center;
+}
+.general .sub-menu {
+    border-radius: 20px;
+    border: 2px solid var(--negro);
+    width: 100%;
+    height: 57px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+.general .item {
+    height: 57px;
+    overflow: hidden;
+}
+/* Efectos */
+.general .active {
+    height: auto;
+}
+.general .active .sub-menu {
+    background-color: var(--colorSecunadrio);
+    border: 2px  black solid transparent;
+    color: #fff;
+}
+.general .sub-menu i {
+    transition: 0.5s;
+}
+.general .active .sub-menu i {
+    transform: rotate(180deg);
+    color: #fff;
+}
+.general .despegable p {
+    color: var(--negro);
 }
 
+/* Fondo */
+.general img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 2;
+    filter: grayscale(70%);
+}
+
+
 /* scroll */
-.general .contenido::-webkit-scrollbar {
+.general .contendor-contenido::-webkit-scrollbar {
     width: 10px;
     background: transparent;
     overflow: hidden;
 }
-
-.general .contenido::-webkit-scrollbar-thumb {
+.general .contendor-contenido::-webkit-scrollbar-thumb {
     background: var(--azul);
     border-radius: 8px;
 }
@@ -602,13 +592,22 @@ p {
 
 /* Casos de estudio */
 .container-casos-estudio {
+    position: relative;
     background: linear-gradient(180deg, #DECDA3 0%, #FDF3D4 100%);
-    padding: 10rem 0;
+    padding: 2rem 0 10rem 0;
     width: 100%;
     margin: 0 auto;
 }
 
+.container-casos-estudio h2 {
+    position: relative;
+    z-index: 1;
+    font-size: clamp(2.5rem, 2.5rem + 1vw, 3.8rem);
+}
+
 .casos-estudio {
+    position: relative;
+    z-index: 1;
     width: 85%;
     margin: 0 auto;
 }
@@ -623,13 +622,22 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(0.66deg, #876445 0.6%, #513C29 0.61%, #E29C5E 99.47%);
+    background: #171615;
     border-radius: 2rem;
     padding: 100% auto;
     margin: 2rem;
     padding: .5rem 0;
     flex-basis: calc(50%-2rem);
-    box-shadow: 0px 0px 14px 5px rgba(166, 166, 166, 1);
+    transition: all 0.5s ease-in-out;
+    box-shadow: 11px 20px 20px rgba(0, 0, 0, 0.25);
+}
+
+.descripcion-caso h3 {
+    text-align: center;
+}
+
+.descripcion-caso:hover, .datos-caso:hover {
+    transform: scale(1.05);
 }
 
 .descripcion-caso img {
@@ -645,32 +653,39 @@ p {
 }
 
 .datos-caso h3 {
+    margin: 2rem auto;
     background: linear-gradient(0deg, rgba(129, 93, 8, 0.2), rgba(220, 33, 33, 0.2)), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(123.77deg, #d6965b 26.02%, #cd8d0d 34.1%, #c18908 42.75%, #7a6201 48.91%, #5f4c00 57.36%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
+    padding: 0 1rem;
+    font-size: clamp(4rem, 4rem + 1vw, 6rem);
+    text-align: center;
+    align-self: end;
+}
+
+.caso-estudio:first-of-type .datos-caso h3 {
+    font-size: clamp(7rem, 7rem + 1vw, 9rem);
 }
 
 .datos-caso {
+    transition: all 0.5s ease-in-out;
     color: white;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(180deg, #F2E3B5 0%, #7C6419 100%);
     border-radius: 2rem;
-    margin: 2rem;
-    box-shadow: 11px 16px 20px rgba(0, 0, 0, 0.25);
-}
-
-.datos-caso h3 {
-    font-size: clamp(2rem, 2rem + 1vw, 4rem);
-    text-align: center;
+    margin: 1rem;
 }
 
 .datos-caso p {
-    margin: 3rem;
+    font-size: clamp(1.8rem, 2rem + 1vw, 2.5rem);
+    text-align: center;
+    align-self: start;
+    margin: 0 2rem;
+    color: var(--colorSecunadrio);
+    font-weight: 700;
 }
 
 @media (min-width: 992px) {
@@ -688,6 +703,12 @@ p {
     .garpenberg .descripcion-caso {
         grid-column: 3 / 4;
         grid-row: 1 / 2;
+    }
+}
+
+@media (max-width: 991px) {
+    .datos-caso {
+        height: clamp(25rem, 25rem + 1vw, 35rem);
     }
 }
 
@@ -747,11 +768,6 @@ p {
     font-size: clamp(3rem, 3rem + 1vw, 5rem);
 }
 
-.caracteristicas-cloudshore {
-    /* display: flex;
-    flex-direction: column;
-    margin: 7rem 0 2rem 0; */
-}
 
 .caracteristica-cloudshore {
     background-color: transparent;
@@ -807,11 +823,14 @@ p {
 
 /* Ofrece Dignita */
 .container-dignita-ofrece {
+    position: relative;
     background: linear-gradient(180deg, white 0%, #FDF3D4 100%);
     padding: 2rem 6rem 2rem 6rem;
 }
 
 .dignita-ofrece {
+    position: relative;
+    z-index: 1;
     margin: 10rem auto 0 auto;
     width: 85%;
 }
@@ -997,7 +1016,6 @@ p {
     flex-direction: column;
     margin: 4rem auto;
     width: 90%;
-    box-shadow: 0px 0px 14px 5px rgba(166, 166, 166, 1);
     transition: all 0.3s ease-in-out;
 }
 
@@ -1009,7 +1027,6 @@ p {
         grid-template-columns: 3fr 7fr;
         margin: 4rem auto;
         width: 90%;
-        box-shadow: 0px 0px 14px 5px rgba(166, 166, 166, 1);
         transition: all 0.3s ease-in-out;
     }
 }
@@ -1276,6 +1293,66 @@ p {
     background-position: right bottom;
 }
 
+.vector-3 {
+    position: absolute;
+    background-image: url(../img/Vector\ 6.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    width: 100%;
+    height: 60%;
+    background-position: left top;
+}
+
+.vector-4 {
+    bottom: 0;
+    position: absolute;
+    background-image: url(../img/Vector\ 7.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    height: 60%;
+    width: 100%;
+    background-position: right bottom;
+    background-origin: content-box;
+}
+
+.vector-5 {
+    position: absolute;
+    background-image: url(../img/Vector\ 8.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    width: 60%;
+    height: 60%;
+    background-position: left top;
+}
+
+.vector-6 {
+    bottom: 0;
+    position: absolute;
+    background-image: url(../img/Vector\ 9.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    width: 100%;
+    height: 70%;
+    background-position: right bottom;
+}
+
+.vector-7 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: url(../img/Vector\ 11.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+    width: 60%;
+    height: 60%;
+    background-position: left bottom;
+}
+
 .mejoras {
     padding: 3rem 0;
 }
@@ -1430,15 +1507,6 @@ p {
     .core .cards-contenedor>div:hover .circulo {
         animation: none;
     }
-}
-
-#particles-js {
-    /* position: inherit;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 0; */
 }
 
 .c, .particles-js-canvas-el{
