@@ -125,7 +125,6 @@ despegable = document.querySelectorAll(".general .despegable");
 
 for (i=0; i< despegable.length; i++) {
   despegable[i].addEventListener("click", function(event) {
-    console.log(event.target)
     if (event.target.closest(".general .despegable .circulo")) {
         let elemento;
       if (event.target.tagName === "DIV") {
@@ -141,23 +140,61 @@ for (i=0; i< despegable.length; i++) {
   })
 }
 
+// Formulario
 
-// const itemActivo = document.querySelector('.activo');
-// const item1 = document.querySelector('.item1');
-// const item3 = document.querySelector('.item3');
+// Añadir la funcion a todos los botones con la clase .select
+let items1 = [];
+items1 = document.querySelectorAll(".core .cards-contenedor");
 
-// setInterval(() => {
-//   const itemActivo = document.querySelector('.activo');
-//   const item1 = document.querySelector('.item1');
-//   const item3 = document.querySelector('.item3');
-//   // Esperar a que termine la transición actual
-//   setTimeout(() => {
-//     itemActivo.classList.remove('activo');
-//     itemActivo.classList.add('item3');
-//     item1.classList.remove('item1');
-//     item1.classList.add('activo');
-//     item3.classList.remove('item3');
-//     item3.classList.add('item1');
-//   }, 500); // Duración de la transición en milisegundos
-// }, 2000);
+for (var i = 0; i < items1.length; i++) {
+  items1[i].addEventListener("click", function() {
+    enviar();
+  });
+}
 
+let items2 = [];
+items2 = document.querySelectorAll(".general .circulo");
+
+for (var i = 0; i < items2.length; i++) {
+  items2[i].addEventListener("click", function() {
+    enviar();
+  });
+}
+
+//
+function enviar() {
+  setTimeout(function() {
+
+    let select = [];
+    select = document.querySelectorAll(".select");
+
+    procesos = document.querySelector(".formulario .procesos");
+
+    let elemento = "";
+    let texto;
+    let etiqueta="";
+
+    for (i=0; i<select.length; i++) {
+      if(select[i].classList.contains("circulo")) {
+        texto = select[i].parentNode.parentNode.children[1].innerText;
+        etiqueta = select[i].parentNode.parentNode.children[2].innerHTML;
+      }
+
+      else{
+        texto = select[i].children[1].innerText;
+      }
+
+      elemento += `
+          <div>
+            <p>${texto}</p>
+            <div class="contenedor-etiquetas">
+              ${etiqueta}
+            </div>
+          </div>
+        `;
+    }
+    
+    procesos.innerHTML = elemento;
+
+  }, 100);
+}
