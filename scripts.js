@@ -198,3 +198,64 @@ function enviar() {
 
   }, 100);
 }
+
+// ! Mensaje
+let core = [];
+core = document.querySelectorAll(".core .cards-contenedor > div");
+
+for (var i = 0; i < core.length; i++) {
+  core[i].addEventListener("click", (function(index) {
+    return function () {
+      if (core[index].classList.contains("select")) {
+        eliminar();
+      } else {
+        agregar();
+      }
+    }
+  })(i));
+}
+
+let general = [];
+general = document.querySelectorAll(".general .circulo");
+
+
+for (var i = 0; i < general.length; i++) {
+  general[i].addEventListener("click", (function(index) {
+    return function () {
+      setTimeout(function(){
+        if (general[index].classList.contains("select")) {
+          agregar();
+        } else {
+          eliminar();
+        }
+      }, 100)
+    }
+  })(i));
+}
+
+//
+function agregar() {
+  let mensaje = document.querySelector(".agregar");
+
+  if (!mensaje.classList.contains("active3")) {
+    mensaje.style.display = "block";
+    mensaje.classList.add("active3");
+    setTimeout(function() {
+      mensaje.classList.remove("active3");
+      mensaje.style.display = "none";
+    }, 3000);
+  }
+}
+
+function eliminar() {
+  let mensaje = document.querySelector(".eliminar");
+
+  if (!mensaje.classList.contains("active3")) {
+    mensaje.style.display = "block";
+    mensaje.classList.add("active3");
+    setTimeout(function() {
+      mensaje.classList.remove("active3");
+      mensaje.style.display = "none";
+    }, 3000);
+  }
+}
