@@ -259,3 +259,27 @@ function eliminar() {
     }, 3000);
   }
 }
+
+// Menú hamburguesa
+const menuIcon = document.querySelector('.menu-hamburguesa');
+const menuContainer = document.querySelector('.menu-container');
+const equisIcon = document.querySelector('.equis');
+const popupMenu = document.querySelector('.popup-menu');
+
+menuIcon.addEventListener('click', () => {
+  menuContainer.classList.add('desplazar');
+  popupMenu.classList.add('active');
+  document.body.style.overflow = "hidden";
+});
+
+equisIcon.addEventListener('click', () => {
+  menuContainer.classList.remove('desplazar');
+  popupMenu.classList.remove('active');
+  document.body.style.overflow = "auto";
+});
+
+popupMenu.addEventListener('click', () => {
+  menuContainer.classList.remove('desplazar');
+  popupMenu.classList.remove('active');
+  document.body.style.overflow = "auto";
+});
