@@ -1830,22 +1830,14 @@ p {
   }
 }
 
-@media (min-width: 992px) {
-  .caracteristicas-dignita {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 5rem;
-  }
-}
-
 .caracteristica-dignita {
-  padding: 2rem;
   border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
-  margin: 4rem auto;
+  align-items: center;
   width: 90%;
   transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 
 .caracteristica-dignita img {
@@ -1854,18 +1846,10 @@ p {
 
 @media (min-width: 992px) {
   .caracteristica-dignita {
-    padding: 2rem;
     border-radius: 1.5rem;
-    display: grid;
-    grid-template-columns: 3fr 7fr;
-    margin: 4rem auto;
     width: 90%;
     transition: all 0.3s ease-in-out;
   }
-}
-
-.caracteristica-dignita:hover {
-  transform: scale(1.08);
 }
 
 .caracteristica-dignita img {
@@ -1877,7 +1861,8 @@ p {
 }
 
 .texto-caracteristica-dignita p {
-  font-size: clamp(1.2rem, 1rem + 1vw, 1.9rem);
+  font-size: clamp(1.6rem, 1.4rem + 1vw, 2.2rem);
+  padding: 0 3rem;
   text-align: justify;
 }
 
