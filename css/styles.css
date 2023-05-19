@@ -630,7 +630,7 @@ p {
   z-index: 0;
   bottom: 25%;
   right: 20%;
-  width: clamp(8rem, 12rem + 3vh, 20rem);
+  width: clamp(6rem, 6rem + 3vh, 10rem);
   transform: rotate(135deg);
 }
 
@@ -639,9 +639,114 @@ p {
   z-index: 0;
   left: 20%;
   top: 20%;
-  width: clamp(8rem, 12rem + 3vh, 20rem);
+  width: clamp(6rem, 6rem + 3vh, 10rem);
   transform: rotate(10deg);
 }
+
+.oro1 {
+  position: absolute;
+  z-index: 0;
+  left: 30%;
+  top: 10%;
+  width: clamp(6rem, 6rem + 3vh, 10rem);
+}
+
+.oro2 {
+  position: absolute;
+  z-index: 0;
+  right: 20%;
+  top: 20%;
+  width: clamp(6rem, 6rem + 3vh, 10rem);
+  transform: rotate(45deg);
+}
+
+.oro3 {
+  position: absolute;
+  z-index: 0;
+  left: 10%;
+  bottom: 35%;
+  width: clamp(6rem, 6rem + 3vh, 10rem);
+  transform: rotate(125deg);
+}
+
+.cobre1 {
+  position: absolute;
+  z-index: 0;
+  left: 10%;
+  bottom: 2%;
+  width: clamp(6rem, 6rem + 3vh, 10rem);
+}
+
+.cobre2 {
+  position: absolute;
+  z-index: 0;
+  right: 5%;
+  bottom: 50%;
+  width: clamp(6rem, 6rem + 3vh, 10rem);
+  transform: rotate(15deg);
+}
+
+.cobre3 {
+  position: absolute;
+  z-index: 0;
+  left: 30%;
+  top: 40%;
+  width: clamp(6rem, 6rem + 3vh, 10rem);
+  transform: rotate(125deg);
+}
+
+.diamante1 {
+  position: absolute;
+  z-index: 0;
+  left: 10%;
+  top: 10%;
+  width: clamp(6rem, 6rem + 3vh, 10rem);
+  transform: rotate(-90deg);
+}
+
+.diamante2 {
+  position: absolute;
+  z-index: 0;
+  right: 10%;
+  top: 10%;
+  width: clamp(6rem, 6rem + 3vh, 10rem);
+  transform: rotate(0deg);
+} 
+
+.diamante3 {
+  position: absolute;
+  z-index: 0;
+  left: 25%;
+  bottom: 10%;
+  width: clamp(6rem, 6rem + 3vh, 10rem);
+}
+
+.plata1 {
+  position: absolute;
+  z-index: 0;
+  right: 40%;
+  bottom: 40%;
+  width: clamp(6rem, 6rem + 3vh, 10rem);
+}
+
+.plata2 {
+  position: absolute;
+  z-index: 0;
+  right: 10%;
+  bottom: 10%;
+  width: clamp(6rem, 6rem + 3vh, 10rem);
+  transform: rotate(45deg);
+}
+
+.plata3 {
+  position: absolute;
+  z-index: 0;
+  left: 60%;
+  top: 40%;
+  width: clamp(6rem, 6rem + 3vh, 10rem);
+  transform: rotate(145deg);
+}
+
 /* 
 @media (max-width: 767px) {
   .blob3 {
@@ -694,6 +799,10 @@ p {
   color: #ff5c35;
 }
 
+.container-procesos-general h2 > span {
+  color: var(--colorTerciario);
+}
+
 .core {
   width: 85%;
   margin: 0 auto;
@@ -703,6 +812,7 @@ p {
 
 .core>p,
 .procesos-generales>p {
+
   font-weight: bold;
   color: var(--colorTerciario);
   text-align: center;
@@ -710,6 +820,17 @@ p {
   /* 22px */
   margin-bottom: clamp(20px, 1.53vw, 28px);
   /*50px*/
+}
+
+.container-procesos-general .general>p {
+  margin: 0 auto;
+  width: 70%;
+  font-weight: 600;
+  color: var(--colorTerciario);
+  text-align: center;
+  margin-top: clamp(20px, 1.53vw, 28px);
+  /* 22px */
+  margin-bottom: clamp(20px, 1.53vw, 28px);
 }
 
 .core h2 {
@@ -1830,18 +1951,54 @@ p {
   }
 }
 
+/* .container-cards-dignita-ofrece {
+  position: relative;
+} */
+
+.blur-izq {
+  position: absolute;
+  top: 70%;
+  left: -15%;
+  height: clamp(35rem, 40rem + 5vh, 60rem);
+  z-index: 0;
+}
+
+.blur-der {
+  position: absolute;
+  top: 55%;
+  right: -15%;
+  height: clamp(35rem, 40rem + 5vh, 60rem);
+  z-index: 0;
+}
+
+@media (max-width: 1024px) {
+    .blur-der, .blur-izq {
+        display: none;
+    }
+}
+
+.mySwiper5 {
+  padding: 0 0 4rem 0;
+}
+
 .caracteristica-dignita {
+  color: white;
+  background: rgb(219,53,0);
+  background: linear-gradient(45deg, rgba(219,53,0,1) 0%, rgba(255,95,44,0.82) 40%, rgba(255,95,44,0.82) 60%, rgba(255,62,0,1) 100%);
   border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   width: 90%;
   transition: all 0.3s ease-in-out;
   text-align: center;
+  min-height: 620px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
 }
 
 .caracteristica-dignita img {
-  size: 50%;
+  flex: 1;
+  margin: 2rem auto;
 }
 
 @media (min-width: 992px) {
@@ -1852,22 +2009,19 @@ p {
   }
 }
 
-.caracteristica-dignita img {
-  margin: auto;
-}
-
 .texto-caracteristica-dignita {
   margin: 0 1rem;
+  flex: 2;
 }
 
 .texto-caracteristica-dignita p {
-  font-size: clamp(1.6rem, 1.4rem + 1vw, 2.2rem);
+  font-size: clamp(1.4rem, 1.4rem + 1vw, 2rem);
   padding: 0 3rem;
   text-align: justify;
 }
 
 .texto-caracteristica-dignita h3 {
-  font-size: clamp(1.8rem, 2rem + 1vw, 2.2rem);
+  font-size: clamp(2rem, 2rem + 2vw, 2.4rem);
 }
 
 /* Separador */
