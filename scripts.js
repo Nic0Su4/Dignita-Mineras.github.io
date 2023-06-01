@@ -361,49 +361,59 @@ function abrir10() {
 let btn1 = document.querySelector(".btn1");
 btn1.addEventListener("click", ()=>{
   btn1.style.backgroundColor = "#876445";
+  btn1.style.animation = "none";
 })
 
 let btn2 = document.querySelector(".btn2");
 btn2.addEventListener("click", ()=>{
   btn2.style.backgroundColor = "#876445";
+  btn2.style.animation = "none";
 })
 
 let btn3 = document.querySelector(".btn3");
 btn3.addEventListener("click", ()=>{
   btn3.style.backgroundColor = "#876445";
+  btn3.style.animation = "none";
 })
 
 let btn4 = document.querySelector(".btn4");
 btn4.addEventListener("click", ()=>{
   btn4.style.backgroundColor = "#876445";
+  btn4.style.animation = "none";
 })
 
 let btn5 = document.querySelector(".btn5");
 btn5.addEventListener("click", ()=>{
   btn5.style.backgroundColor = "#876445";
+  btn5.style.animation = "none";
 })
 
 let btn6 = document.querySelector(".btn6");
 btn6.addEventListener("click", ()=>{
   btn6.style.backgroundColor = "#876445";
+  btn6.style.animation = "none";
 })
 
 let btn7 = document.querySelector(".btn7");
 btn7.addEventListener("click", ()=>{
   btn7.style.backgroundColor = "#876445";
+  btn7.style.animation = "none";
 })
 
 let btn8 = document.querySelector(".btn8");
 btn8.addEventListener("click", ()=>{
   btn8.style.backgroundColor = "#876445";
+  btn8.style.animation = "none";
 })
 
 let btn9 = document.querySelector(".btn9");
 btn9.addEventListener("click", ()=>{
   btn9.style.backgroundColor = "#876445";
+  btn9.style.animation = "none";
 })
 
 let btn10 = document.querySelector(".btn10");
 btn10.addEventListener("click", ()=>{
   btn10.style.backgroundColor = "#876445";
+  btn10.style.animation = "none";
 })
